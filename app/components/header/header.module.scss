@@ -1,0 +1,35 @@
+.header {
+  margin: 0 6.4rem;
+  padding: 1.6rem;
+  color: white;
+  nav {
+    font-size: 2rem;
+    display: flex;
+    gap: 3rem;
+  }
+}
+
+.logoBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  font-size: 2.4rem;
+  color: black;
+}
+
+.navList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+  a {
+    color: var(--gray);
+    &:hover {
+      color: black;
+    }
+    &.active {
+      color: var(--sky);
+    }
+  }
+}

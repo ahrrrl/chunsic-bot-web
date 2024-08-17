@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 10px; /* 1rem = 10px */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 3.2rem;
+}
+
+:root {
+  --primary: #0070f3;
+  --secondary: #f0f0f0;
+  --text: #333;
+  --background: #fff;
+
+  --sky: #0070f3;
+  --gray: #666;
+}
