@@ -6,6 +6,7 @@ import { toc } from './toc';
 import RightSidebar from '../components/rightSidebar';
 import LeftSidebar from '../components/leftSidebar';
 import MainContent from '../components/MainContent.tsx';
+import Link from 'next/link';
 
 export interface Heading {
   id: string;
@@ -27,7 +28,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className={styles.docs}>
       <aside className={`${styles.sidebar} ${styles.left}`}>
-        <div>전체 페이지 목차</div>
+        <Link href='/docs'>
+          <span className={styles.docTitle}>춘식이 1.0 설명서</span>
+        </Link>
         <LeftSidebar toc={toc} />
       </aside>
       <div className={styles.mainContent}>

@@ -1,13 +1,40 @@
 .docs {
+  position: relative;
   display: flex;
-  font-size: 1.6rem; /* 기본 글씨 크기 설정 */
+  font-size: 1.6rem;
+  max-width: 124rem;
+  line-height: 3rem;
+  margin: 0 auto;
+  h1 {
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
+  }
+  h2 {
+    font-size: 2.4rem;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-color: var(--gray01);
+    padding-top: 2.5rem;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+  table {
+    margin: 3rem 0;
+  }
+  .feature {
+    color: var(--sky);
+  }
+  td {
+    border-top: 1px solid var(--gray01);
+    padding: 1rem; /* 행 높이를 넓히기 위해 패딩 추가 */
+    text-align: left;
+  }
 }
 
 .sidebar {
-  width: 30rem;
-  background-color: var(--secondary);
-  padding: 1rem;
-
   ul {
     list-style: none;
     padding: 0;
@@ -34,28 +61,34 @@
   margin-left: 20px;
 }
 
-.docs {
-  display: flex;
+.docTitle {
+  margin: 2rem 0;
+  cursor: pointer;
 }
 
 .sidebar {
-  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  position: sticky;
   flex: 0 0 22rem;
   max-height: calc(100vh - 6.4rem);
   overflow-y: auto;
 }
 
 .mainContent {
+  display: flex;
   flex: 1;
-  margin-left: 30rem; /* 왼쪽 사이드바 너비만큼 마진 */
-  margin-right: 30rem;
 }
 
 .sidebar.left {
+  top: 6.4rem;
   left: 0;
 }
 
 .sidebar.right {
+  top: 6.4rem;
   right: 0;
 }
 
