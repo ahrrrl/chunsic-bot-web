@@ -22,13 +22,13 @@ const appendParentUrl = (
 
 export const toc = appendParentUrl([
   {
-    url: 'docs/getting-started',
+    url: '/docs/getting-started',
     text: '시작하기',
     level: 1,
     children: [],
   },
   {
-    url: 'docs/commands',
+    url: '/docs/commands',
     text: '커멘드',
     level: 1,
     children: [

@@ -8,6 +8,11 @@ a {
   text-decoration: none;
 }
 
+li,
+ul {
+  list-style: none;
+}
+
 html {
   font-size: 10px; /* 1rem = 10px */
 }
@@ -37,4 +42,9 @@ main {
 
   --sky: #0070f3;
   --gray: #666;
+}
+
+.mainContainer {
+  margin-top: 6.4rem;
+  position: relative;
 }

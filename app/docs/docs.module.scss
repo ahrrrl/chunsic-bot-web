@@ -1,25 +1,70 @@
 .docs {
   display: flex;
+  font-size: 1.6rem; /* 기본 글씨 크기 설정 */
 }
 
 .sidebar {
-  width: 200px;
-  background-color: #f0f0f0;
+  width: 30rem;
+  background-color: var(--secondary);
   padding: 1rem;
+
   ul {
     list-style: none;
     padding: 0;
+
     li {
       margin-bottom: 1rem;
+
       a {
-        text-decoration: none;
-        color: #0070f3;
+        color: var(--gray);
+
+        &.active {
+          color: var(--sky);
+        }
+
+        &:hover {
+          color: var(--sky);
+        }
       }
     }
   }
 }
 
-.content {
+.level2 {
+  margin-left: 20px;
+}
+
+.docs {
+  display: flex;
+}
+
+.sidebar {
+  position: fixed;
+  flex: 0 0 22rem;
+  max-height: calc(100vh - 6.4rem);
+  overflow-y: auto;
+}
+
+.mainContent {
   flex: 1;
-  padding: 1rem;
+  margin-left: 30rem; /* 왼쪽 사이드바 너비만큼 마진 */
+  margin-right: 30rem;
+}
+
+.sidebar.left {
+  left: 0;
+}
+
+.sidebar.right {
+  right: 0;
+}
+
+@media (max-width: 1023px) {
+  .sidebar.right {
+    display: none;
+  }
+
+  .mainContent {
+    margin-right: 0; /* 오른쪽 사이드바가 사라지면 마진 제거 */
+  }
 }
