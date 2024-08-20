@@ -42,6 +42,11 @@ export const toc = appendParentUrl([
         text: '일정 설정',
         level: 2,
       },
+      {
+        url: 'introduction',
+        text: '춘식이의 자기소개',
+        level: 2,
+      },
     ],
   },
 ]);

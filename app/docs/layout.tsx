@@ -29,7 +29,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <div className={styles.docs}>
       <aside className={`${styles.sidebar} ${styles.left}`}>
         <Link href='/docs'>
-          <span className={styles.docTitle}>춘식이 1.0 설명서</span>
+          <div className={styles.docTitleBox}>
+            <span className={styles.docTitle}>춘식이 1.0 설명서</span>
+          </div>
         </Link>
         <LeftSidebar toc={toc} />
       </aside>

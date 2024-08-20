@@ -44,7 +44,6 @@
 
       a {
         color: var(--gray);
-
         &.active {
           color: var(--sky);
         }
@@ -61,8 +60,11 @@
   margin-left: 20px;
 }
 
-.docTitle {
+.docTitleBox {
   margin: 2rem 0;
+}
+
+.docTitle {
   cursor: pointer;
 }
 
@@ -99,5 +101,12 @@
 
   .mainContent {
     margin-right: 0; /* 오른쪽 사이드바가 사라지면 마진 제거 */
+  }
+}
+ul {
+  li.active {
+    a {
+      color: var(--sky); // 원하는 색상으로 변경
+    }
   }
 }
