@@ -50,3 +50,11 @@ main {
   margin-top: 6.4rem;
   position: relative;
 }
+
+.activate {
+  color: var(--sky);
+  cursor: pointer;
+  &:hover {
+    opacity: 0.5;
+  }
+}
