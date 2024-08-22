@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './header.module.scss';
 import { usePathname } from 'next/navigation';
+import DarkModeButton from './components/darkModeButton';
 
 const links = [
   {
@@ -18,6 +19,7 @@ const links = [
 
 export default function Header() {
   const pathname = usePathname();
+
   return (
     <header className={styles.header}>
       <nav>
@@ -41,6 +43,7 @@ export default function Header() {
             </Link>
           ))}
         </div>
+        <DarkModeButton />
       </nav>
     </header>
   );
