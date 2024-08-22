@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+code {
+  background-color: var(--gray02);
+  border-radius: 0.5rem;
+  border-width: 1px;
+  border-color: var(--gray03);
+  padding: 0.2rem 0.4rem;
+}
+
 a {
   color: black;
   text-decoration: none;
@@ -44,6 +52,8 @@ main {
   --sky: #0070f3;
   --gray: #666; //비활성화 폰트 색상
   --gray01: rgba(0, 0, 0, 0.1);
+  --gray02: rgba(242, 242, 242, 1);
+  --gray03: rgba(235, 235, 235, 1);
 }
 
 .mainContainer {
@@ -57,4 +67,13 @@ main {
   &:hover {
     opacity: 0.5;
   }
+}
+
+.warringBox {
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: rgb(216, 103, 103);
+  border-radius: 1.5rem;
+  border: none;
 }

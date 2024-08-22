@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
 import { Noto_Sans_KR } from 'next/font/google';
 import './globals.scss';
-import Link from 'next/link';
-import Image from 'next/image';
 import Header from './components/header';
+import Footer from './components/footer';
 
 const inter = Noto_Sans_KR({ subsets: ['latin'] });
 
@@ -13,6 +12,7 @@ export const metadata: Metadata = {
     '춘식봇은 디스코드 서버를 관리하고 다양한 기능을 제공하는 봇입니다.',
   keywords: '춘식봇, 디스코드 봇, 서버 관리, 디스코드',
   authors: [{ name: 'joe hyeonjin' }],
+  robots: 'index, follow',
 };
 
 export default function RootLayout({
@@ -26,6 +26,7 @@ export default function RootLayout({
         <div className='layout'>
           <Header />
           <div className='mainContainer'>{children}</div>
+          <Footer />
         </div>
       </body>
     </html>

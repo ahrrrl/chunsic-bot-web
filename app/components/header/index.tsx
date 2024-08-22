@@ -21,12 +21,11 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <nav>
-        <div className={styles.logoBox}>
-          <Link href='/'>
-            <Image src='/chunsic-logo.png' alt='logo' width={44} height={44} />
-          </Link>
-          춘식이 봇
-        </div>
+        <Link href='/' className={styles.logoBox}>
+          <Image src='/chunsic-logo.png' alt='logo' width={44} height={44} />
+          춘식봇
+        </Link>
+
         <div className={styles.navList}>
           {links.map(({ name, href }) => (
             <Link

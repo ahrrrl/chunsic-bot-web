@@ -29,7 +29,7 @@ export const toc = appendParentUrl([
   },
   {
     url: '/docs/commands',
-    text: '커멘드',
+    text: '명령어',
     level: 1,
     children: [
       {
