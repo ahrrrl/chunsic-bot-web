@@ -1,6 +1,7 @@
 import { CHUNSIC_BOT_URL, IMAGES } from '@/app/constants';
 import Image from 'next/image';
 import Link from 'next/link';
+import styles from './page.module.scss';
 
 export default function Page() {
   return (
@@ -14,7 +15,8 @@ export default function Page() {
       <div>
         <Link target='_blank' href={CHUNSIC_BOT_URL}>
           <Image
-            src='/chunsic-logo.png'
+            className={styles.inviteButton}
+            src={IMAGES.CHUNSIC_LOGO}
             alt='춘식이 초대 버튼'
             width={80}
             height={80}
