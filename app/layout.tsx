@@ -13,6 +13,30 @@ export const metadata: Metadata = {
   keywords: '춘식봇, 디스코드 봇, 서버 관리, 디스코드',
   authors: [{ name: 'joe hyeonjin' }],
   robots: 'index, follow',
+  openGraph: {
+    title: '춘식봇 - 디스코드 봇',
+    description:
+      '춘식봇은 디스코드 서버를 관리하고 다양한 기능을 제공하는 봇입니다.',
+    url: 'https://chunsic-bot-web.vercel.app',
+    siteName: '춘식봇',
+    images: [
+      {
+        url: 'https://chunsic-bot-web.vercel.app/img/main/춘식봇메인.png',
+        width: 1200,
+        height: 630,
+        alt: '춘식봇 이미지',
+      },
+    ],
+    locale: 'ko_KR',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '춘식봇 - 디스코드 봇',
+    description:
+      '춘식봇은 디스코드 서버를 관리하고 다양한 기능을 제공하는 봇입니다.',
+    images: ['https://chunsic-bot-web.vercel.app/img/main/춘식봇메인.png'], // 이미지의 절대 URL을 입력하세요
+  },
 };
 
 export default function RootLayout({
