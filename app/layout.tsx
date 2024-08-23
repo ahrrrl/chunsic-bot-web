@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   keywords: '춘식봇, 디스코드 봇, 서버 관리, 디스코드',
   authors: [{ name: 'joe hyeonjin' }],
   robots: 'index, follow',
+  viewport: 'width=device-width, initial-scale=1',
   openGraph: {
     title: '춘식봇 - 디스코드 봇',
     description:
