@@ -1,3 +1,4 @@
+import { IMAGES } from '@/app/constants';
 import Image from 'next/image';
 
 export default function Page() {
@@ -62,7 +63,7 @@ export default function Page() {
       <h2>/알람설정보기</h2>
       <p>현재 서버에 설정된 모든 알람 시간을 확인하고 삭제할 수 있습니다.</p>
       <Image
-        src='/img/doc/알람설정보기사진.png'
+        src={IMAGES.DOC_ALARM_SETTING}
         alt='알람설정보기사진'
         width={300}
         height={300}

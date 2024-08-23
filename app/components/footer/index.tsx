@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.info}>
-          <p>© 2023 춘식봇. All rights reserved.</p>
+          <p>© 2024 춘식봇. All rights reserved.</p>
           <p>디스코드 봇으로 일정을 관리하고 알람을 받으세요.</p>
         </div>
         <div className={styles.links}>

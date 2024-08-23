@@ -1,3 +1,4 @@
+import { CHUNSIC_BOT_URL, IMAGES } from '@/app/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -11,10 +12,7 @@ export default function Page() {
       <h2>디스코드 서버에 춘식이 봇 초대하기</h2>
       <p>춘식이 봇을 사용하고 싶은 서버에 춘식이를 초대합니다.</p>
       <div>
-        <Link
-          target='_blank'
-          href='https://discord.com/oauth2/authorize?client_id=1271278938911408228&permissions=0&integration_type=0&scope=bot+applications.commands'
-        >
+        <Link target='_blank' href={CHUNSIC_BOT_URL}>
           <Image
             src='/chunsic-logo.png'
             alt='춘식이 초대 버튼'
@@ -26,7 +24,7 @@ export default function Page() {
       </div>
       <p>링크를 누르고 초대할 서버를 선택해주세요.</p>
       <Image
-        src='/img/doc/서버추가사진.png'
+        src={IMAGES.DOC_START_SERVER}
         alt='서버 추가 사진'
         width={500}
         height={800}
@@ -38,7 +36,7 @@ export default function Page() {
         있는겁니다!
       </p>
       <Image
-        src='/img/doc/서버추가확인사진.png'
+        src={IMAGES.DOC_CHECK_CHUNSIC}
         alt='춘식이봇 확인'
         width={300}
         height={200}

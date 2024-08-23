@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './darkModeButton.module.scss';
-import moonIcon from '/public/img/icon/moon.svg';
-import sunIcon from '/public/img/icon/sun.svg';
 import Image from 'next/image';
+import { IMAGES } from '@/app/constants';
 
 export default function DarkModeButton() {
   const [theme, setTheme] = useState('light');
@@ -32,7 +31,7 @@ export default function DarkModeButton() {
         <div className={styles.ball}>
           <Image
             fill
-            src={theme === 'dark' ? moonIcon : sunIcon}
+            src={theme === 'dark' ? IMAGES.MOON_ICON : IMAGES.SUN_ICON}
             alt='theme icon'
           />
         </div>

@@ -1,3 +1,4 @@
+import { IMAGES } from '@/app/constants';
 import Image from 'next/image';
 
 export default function Page() {
@@ -12,7 +13,7 @@ export default function Page() {
         볼 수 있습니다.
       </p>
       <Image
-        src='/img/doc/커멘드목록사진.png'
+        src={IMAGES.DOC_COMMANDS}
         alt='케먼드목록'
         width={600}
         height={300}

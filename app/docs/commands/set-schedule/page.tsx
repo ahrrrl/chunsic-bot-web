@@ -1,3 +1,4 @@
+import { IMAGES } from '@/app/constants';
 import Image from 'next/image';
 
 export default function Page() {
@@ -50,7 +51,7 @@ export default function Page() {
       <h2>/일정보기</h2>
       <p>현재 서버에 저장되어 있는 일정들을 볼 수 있고 삭제할 수 있습니다.</p>
       <Image
-        src='/img/doc/일정보기사진.png'
+        src={IMAGES.DOC_SCHUDULE_LIST}
         alt='일정보기사진'
         width={300}
         height={300}

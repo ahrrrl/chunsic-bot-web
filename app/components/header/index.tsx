@@ -5,6 +5,7 @@ import Link from 'next/link';
 import styles from './header.module.scss';
 import { usePathname } from 'next/navigation';
 import DarkModeButton from './components/darkModeButton';
+import { IMAGES } from '@/app/constants';
 
 const links = [
   {
@@ -24,7 +25,7 @@ export default function Header() {
     <header className={styles.header}>
       <nav>
         <Link href='/' className={styles.logoBox}>
-          <Image src='/chunsic-logo.png' alt='logo' width={44} height={44} />
+          <Image src={IMAGES.CHUNSIC_LOGO} alt='logo' width={44} height={44} />
           춘식봇
         </Link>
 
