@@ -6,6 +6,7 @@ import styles from './header.module.scss';
 import { usePathname } from 'next/navigation';
 import DarkModeButton from './components/darkModeButton';
 import { IMAGES } from '@/app/constants';
+import SearchBar from '../searchBar';
 
 const links = [
   {
@@ -45,6 +46,7 @@ export default function Header() {
           ))}
         </div>
         <DarkModeButton />
+        <SearchBar />
       </nav>
     </header>
   );

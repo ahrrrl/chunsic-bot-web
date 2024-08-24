@@ -14,35 +14,44 @@ export default function Page() {
       <p>춘식이 봇을 사용하고 싶은 서버에 춘식이를 초대합니다.</p>
       <div>
         <Link target='_blank' href={CHUNSIC_BOT_URL}>
-          <Image
-            className={styles.inviteButton}
-            src={IMAGES.CHUNSIC_LOGO}
-            alt='춘식이 초대 버튼'
-            width={80}
-            height={80}
-          />
-          <span className='activate'>춘식이 초대하기</span>
+          <div className='imgContainer'>
+            <Image
+              className={styles.inviteButton}
+              src={IMAGES.CHUNSIC_LOGO}
+              alt='춘식이 초대 버튼'
+              width={80}
+              height={80}
+            />
+          </div>
+          <div className={styles.inviteBox}>
+            <span className={styles.activate}>춘식이 초대하기</span>
+          </div>
         </Link>
       </div>
       <p>링크를 누르고 초대할 서버를 선택해주세요.</p>
-      <Image
-        src={IMAGES.DOC_START_SERVER}
-        alt='서버 추가 사진'
-        width={500}
-        height={800}
-      />
-
+      <div className='imgContainer'>
+        <Image
+          className='imageRadius'
+          src={IMAGES.DOC_START_SERVER}
+          alt='서버 추가 사진'
+          width={500}
+          height={700}
+        />
+      </div>
       <h2>초대 및 작동 확인</h2>
       <p>
         디스코드 멤버 목록에 ChunsicService가 초록불이 들어와 있다면 작동을 하고
         있는겁니다!
       </p>
-      <Image
-        src={IMAGES.DOC_CHECK_CHUNSIC}
-        alt='춘식이봇 확인'
-        width={300}
-        height={200}
-      />
+      <div className='imgContainer'>
+        <Image
+          className='imageRadius'
+          src={IMAGES.DOC_CHECK_CHUNSIC}
+          alt='춘식이봇 확인'
+          width={300}
+          height={200}
+        />
+      </div>
     </>
   );
 }

@@ -62,12 +62,15 @@ export default function Page() {
       </div>
       <h2>/알람설정보기</h2>
       <p>현재 서버에 설정된 모든 알람 시간을 확인하고 삭제할 수 있습니다.</p>
-      <Image
-        src={IMAGES.DOC_ALARM_SETTING}
-        alt='알람설정보기사진'
-        width={300}
-        height={300}
-      />
+      <div className='imgContainer'>
+        <Image
+          className='imageRadius'
+          src={IMAGES.DOC_ALARM_SETTING}
+          alt='알람설정보기사진'
+          width={300}
+          height={300}
+        />
+      </div>
       <p>
         알람 삭제 버튼을 누르면 삭제할 알람의 번호(인덱스)를 적는 창이
         뜨게됩니다.

@@ -68,17 +68,15 @@ a {
   text-decoration: none;
 }
 
+input {
+  &:focus {
+    outline: none; /* 포커스 시 테두리 색상 변경 방지 */
+  }
+}
+
 .mainContainer {
   margin-top: 6.4rem;
   position: relative;
-}
-
-.activate {
-  color: var(--sky);
-  cursor: pointer;
-  &:hover {
-    opacity: 0.5;
-  }
 }
 
 .warringBox {
@@ -88,4 +86,14 @@ a {
   background-color: rgb(216, 103, 103);
   border-radius: 1.5rem;
   border: none;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageRadius {
+  border-radius: 1.5rem;
 }

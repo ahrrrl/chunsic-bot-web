@@ -12,12 +12,15 @@ export default function Page() {
         나오며 좌측 상단에 춘식이 봇 로고를 누르면 춘식이 봇과 관련된 명령어만
         볼 수 있습니다.
       </p>
-      <Image
-        src={IMAGES.DOC_COMMANDS}
-        alt='케먼드목록'
-        width={600}
-        height={300}
-      />
+      <div className='imgContainer'>
+        <Image
+          className='imageRadius'
+          src={IMAGES.DOC_COMMANDS}
+          alt='케먼드목록'
+          width={500}
+          height={300}
+        />
+      </div>
     </>
   );
 }

@@ -1,4 +1,3 @@
-// app/docs/toc.ts
 export interface TocItem {
   url: string;
   text: string;

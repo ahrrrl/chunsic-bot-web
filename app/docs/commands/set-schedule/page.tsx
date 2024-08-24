@@ -50,12 +50,15 @@ export default function Page() {
       </p>
       <h2>/일정보기</h2>
       <p>현재 서버에 저장되어 있는 일정들을 볼 수 있고 삭제할 수 있습니다.</p>
-      <Image
-        src={IMAGES.DOC_SCHUDULE_LIST}
-        alt='일정보기사진'
-        width={300}
-        height={300}
-      />
+      <div className='imgContainer'>
+        <Image
+          className='imageRadius'
+          src={IMAGES.DOC_SCHUDULE_LIST}
+          alt='일정보기사진'
+          width={300}
+          height={300}
+        />
+      </div>
       <h2>/일정삭제</h2>
       <p>
         <code>/일정보기</code>를 거치지 않고 명령어를 바로 입력하고 삭제할
