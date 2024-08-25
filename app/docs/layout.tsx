@@ -7,6 +7,7 @@ import RightSidebar from '../components/rightSidebar';
 import LeftSidebar from '../components/leftSidebar';
 import MainContent from '../components/MainContent.tsx';
 import Link from 'next/link';
+import ChildrenCard from '../components/childrenCard';
 
 export interface Heading {
   id: string;
@@ -36,7 +37,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <LeftSidebar toc={toc} />
       </aside>
       <div className={styles.mainContent}>
-        <MainContent setHeadings={setHeadings}>{children}</MainContent>
+        <MainContent setHeadings={setHeadings}>
+          {children}
+          <ChildrenCard toc={toc} />
+        </MainContent>
       </div>
       <aside className={`${styles.sidebar} ${styles.right}`}>
         <RightSidebar headings={headings} handleClick={handleClick} />

@@ -6,7 +6,7 @@ import styles from './page.module.scss';
 export default function Page() {
   return (
     <>
-      <h1>시작하기</h1>
+      <h1>시작하기😆</h1>
       <p>춘식이봇 요구사항</p>
       <p>- 디스코드 로그인</p>
       <p>- 적용할 디스코드 서버</p>
@@ -50,6 +50,22 @@ export default function Page() {
           alt='춘식이봇 확인'
           width={300}
           height={200}
+        />
+      </div>
+      <h2>명령어 사용법</h2>
+      <p>춘식이를 사용하기 위해서는 명령어(&#39;/&#39;)를 사용하셔야합니다.</p>
+      <p>
+        서버 채팅창에 (&#39;/&#39;)를 입력하면 디스코드 전체 명령어 리스트가
+        나오며 좌측 상단에 춘식이 봇 로고를 누르면 춘식이 봇과 관련된 명령어만
+        볼 수 있습니다.
+      </p>
+      <div className='imgContainer'>
+        <Image
+          className='imageRadius'
+          src={IMAGES.DOC_COMMANDS}
+          alt='케먼드목록'
+          width={500}
+          height={300}
         />
       </div>
     </>

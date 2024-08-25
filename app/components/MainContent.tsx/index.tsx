@@ -28,7 +28,7 @@ const MainContent: React.FC<MainContentProps> = ({ children, setHeadings }) => {
       );
       setHeadings(headingsArray);
     }
-  }, [path, children, setHeadings]);
+  }, [path, setHeadings]);
 
   return <main ref={mainRef}>{children}</main>;
 };
