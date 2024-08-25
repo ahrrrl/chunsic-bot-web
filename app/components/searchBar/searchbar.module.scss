@@ -20,7 +20,7 @@
     z-index: 1;
     width: 100%;
     position: absolute;
-    background-color: white;
+    background-color: var(--background-color);
     top: 6.5rem;
     border: 1px solid #ccc;
     border-radius: 1.5rem;
@@ -28,7 +28,7 @@
     overflow-y: auto;
 
     .focused {
-      background-color: #f0f0f0;
+      opacity: 0.5;
     }
 
     .level1 {
@@ -52,11 +52,10 @@
           border-bottom: none;
         }
         &:hover {
-          background-color: #f0f0f0;
+          opacity: 0.5;
         }
         a {
-          color: #333;
-          text-decoration: none;
+          color: var(--text-color);
           display: block;
         }
       }

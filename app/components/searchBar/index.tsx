@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { toc, TocItem } from '../../docs/toc';
 import styles from './searchbar.module.scss';
 import Link from 'next/link';
@@ -8,7 +8,7 @@ const Searchbar = () => {
   const [searchResults, setSearchResults] = useState<TocItem[]>([]);
   const [focusedIndex, setFocusedIndex] = useState(-1);
 
-  const searchToc = (items: TocItem[], term: string): TocItem[] => {
+  const searchToc = useCallback((items: TocItem[], term: string): TocItem[] => {
     return items.reduce((acc: TocItem[], item) => {
       if (item.text.toLowerCase().includes(term.toLowerCase())) {
         const matchedItem = {
@@ -24,9 +24,9 @@ const Searchbar = () => {
       }
       return acc;
     }, []);
-  };
+  }, []);
 
-  const flattenResults = (items: TocItem[]): TocItem[] => {
+  const flattenResults = useCallback((items: TocItem[]): TocItem[] => {
     return items.reduce((acc: TocItem[], item) => {
       acc.push(item);
       if (item.children) {
@@ -34,13 +34,13 @@ const Searchbar = () => {
       }
       return acc;
     }, []);
-  };
+  }, []);
 
   const filteredResults = useMemo(() => {
     if (searchTerm.trim() === '') return [];
     const results = searchToc(toc, searchTerm);
     return flattenResults(results);
-  }, [searchTerm]);
+  }, [searchTerm, searchToc, flattenResults]);
 
   useEffect(() => {
     setSearchResults(filteredResults);

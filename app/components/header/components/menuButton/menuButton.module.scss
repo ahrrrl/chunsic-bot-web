@@ -1,0 +1,13 @@
+.menuButton {
+  display: none;
+  @media (max-width: 1000px) {
+    width: 2.4rem;
+    height: 2.4rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+.menuIcon {
+  stroke: var(--text-color);
+}
