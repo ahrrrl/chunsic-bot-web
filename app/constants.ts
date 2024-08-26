@@ -7,6 +7,7 @@ import docCheckChunsic from '@/public/img/doc/서버추가확인사진.png';
 import docCommands from '@/public/img/doc/커멘드목록사진.png';
 import docAlarmSetting from '@/public/img/doc/알람설정보기사진.png';
 import docSchuduleList from '@/public/img/doc/일정보기사진.png';
+import discordIcon from '@/public/img/icon/discord.svg';
 
 // Image Paths
 export const IMAGES = {
@@ -19,7 +20,11 @@ export const IMAGES = {
   DOC_COMMANDS: docCommands,
   DOC_ALARM_SETTING: docAlarmSetting,
   DOC_SCHUDULE_LIST: docSchuduleList,
+  DISCORD_ICON: discordIcon,
 };
 
 export const CHUNSIC_BOT_URL =
   'https://discord.com/oauth2/authorize?client_id=1271278938911408228&permissions=0&integration_type=0&scope=bot+applications.commands';
+
+export const BASE_URL =
+  process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';

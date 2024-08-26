@@ -18,8 +18,8 @@ export const links = [
     href: '/docs',
   },
   {
-    name: '기타',
-    href: '/github',
+    name: '함께하는 서버들',
+    href: '/participation',
   },
 ];
 
