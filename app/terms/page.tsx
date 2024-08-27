@@ -3,7 +3,7 @@ export default function Page() {
     <main className='mainContainer'>
       <h1>이용약관</h1>
       <div>
-        <h2>춘식이봇을 사용함으로써, 다음 약관에 동의하는 것으로 간주됩니다</h2>
+        <h2>춘식봇을 사용함으로써, 다음 약관에 동의하는 것으로 간주됩니다</h2>
         <p>
           1. 사용: 이 봇은 보증 없이 &quot;있는 그대로&quot; 제공됩니다.
           사용자는 자신의 책임 하에 사용해야 합니다.
