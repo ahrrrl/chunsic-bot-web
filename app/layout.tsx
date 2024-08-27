@@ -49,7 +49,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className='layout'>
           <Header />
-          <div className='mainContainer'>{children}</div>
+          <div className='layoutContainer'>{children}</div>
           <Footer />
         </div>
       </body>
