@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 춘식봇 doc 웹
 
-## Getting Started
+춘식봇은 디스코드 서버 내에서 일정을 관리하고 정해진 시간에 자동으로 사용자에게 메시지를 보내주는 봇입니다. 춘식봇 doc 웹은 디스코드 봇에 대해 익숙하지 않거나 춘식봇 이용에 자세한 정보를 얻고 싶은 이용자들에게 정보를 제공하는 웹 사이트입니다.
 
-First, run the development server:
+# 주요 기능
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **문서 검색**: 춘식봇 문서를 검색할 수 있습니다.
+- **시작하기 가이드**: 춘식봇을 처음 사용하는 사용자를 위한 단계별 가이드를 제공합니다.
+- **명령어 설명**: 춘식봇에서 사용할 수 있는 명령어와 그 사용법을 설명합니다.
+- **이용 서버 리스트**: 춘식봇을 사용하는 디스코드 서버들을 볼 수 있습니다.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 시작하기
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 요구사항
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- 디스코드 로그인
+- 적용할 디스코드 서버
 
-## Learn More
+### 디스코드 서버에 춘식이 봇 초대하기
 
-To learn more about Next.js, take a look at the following resources:
+1. 춘식이 봇을 사용하고 싶은 서버에 춘식이를 초대합니다.
+2. 링크를 누르고 초대할 서버를 선택해주세요.
+3. 디스코드 멤버 목록에 ChunsicService가 초록불이 들어와 있다면 작동을 하고 있는겁니다!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 명령어 사용법
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+춘식이를 사용하기 위해서는 명령어(`/`)를 사용하셔야합니다. 서버 채팅창에 `/`를 입력하면 디스코드 전체 명령어 리스트가 나오며 좌측 상단에 춘식이 봇 로고를 누르면 춘식이 봇과 관련된 명령어만 볼 수 있습니다.
 
-## Deploy on Vercel
+## 문서
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+문서 페이지는 춘식이 봇을 사용자의 디스코드 서버에 연결하는 방법부터 사용하기 위한 명령어 설정들이 순차적으로 구성되어 있습니다. 그러나 원하는 순서대로 읽거나 필요한 부분만 읽어도 상관없습니다.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [시작하기](app/docs/getting-started/page.tsx)
+- [춘식봇 소개](app/docs/miscellaneous/indroduce/page.tsx)
+- [이용약관](app/terms/page.tsx)
+
+## 배포
+
+Next.js 앱을 배포하는 가장 쉬운 방법은 Next.js의 제작자가 만든 [Vercel 플랫폼](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)을 사용하는 것입니다.
+
+자세한 내용은 [Next.js 배포 문서](https://nextjs.org/docs/deployment)를 참조하세요.
+
+## 춘식봇 github 주소
+
+- [춘식봇 주소](https://github.com/ahrrrl/discord-chunsicBot)
