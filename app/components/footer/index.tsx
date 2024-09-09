@@ -13,6 +13,7 @@ export default function Footer() {
           <Link href='/docs'>문서</Link>
           <Link href='/privacy'>개인정보처리방침</Link>
           <Link href='/terms'>이용약관</Link>
+          <Link href='https://forms.gle/x1yPoKcqdVa5d4if7'>문의 및 건의</Link>
         </div>
       </div>
     </footer>

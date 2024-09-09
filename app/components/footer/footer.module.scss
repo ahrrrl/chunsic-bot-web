@@ -1,17 +1,25 @@
 .footer {
+  width: 100%;
   padding: 20px 0;
-  text-align: center;
   border-top: 1px solid #e9ecef;
+  font-size: 1.4rem;
+  text-align: center;
 }
 
 .container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  @media (max-width: 1000px) {
+  }
 }
 
 .info {
+  flex: 1;
   margin-bottom: 10px;
 }
 
