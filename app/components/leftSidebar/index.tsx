@@ -11,7 +11,7 @@ export default function LeftSidebar({ toc }: LeftSidebarProps) {
   const pathname = usePathname();
   const renderTOC = (toc: TocItem[]) => {
     return (
-      <ul>
+      <ul className={styles.leftSidebarBox}>
         {toc.map((item) => (
           <li key={item.url} className={item.level === 2 ? styles.level2 : ''}>
             <Link
