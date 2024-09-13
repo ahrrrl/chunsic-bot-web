@@ -41,13 +41,13 @@ export default function Page() {
             <td>
               <code>타입</code> 사전알림, <code>시간</code> 00:00
             </td>
-            <td>일정이 있는 날, 일정 시간에 알려줍니다.</td>
+            <td>일정 시간에 알려줍니다.</td>
           </tr>
           <tr>
             <td>
               <code>타입</code> 사전알림, <code>시간</code> 00:30
             </td>
-            <td>일정이 있는 날, 일정 30분 전에 알려줍니다.</td>
+            <td>일정 30분 전에 알려줍니다.</td>
           </tr>
         </tbody>
       </table>
