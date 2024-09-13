@@ -2,6 +2,7 @@ import { CHUNSIC_BOT_URL, IMAGES } from '@/app/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.scss';
+import Button from '@/app/components/button';
 
 export default function Page() {
   return (
@@ -24,7 +25,9 @@ export default function Page() {
             />
           </div>
           <div className={styles.inviteBox}>
-            <span className={styles.activate}>춘식이 초대하기</span>
+            <Button size='small' variant='secondary'>
+              춘식이 초대하기
+            </Button>
           </div>
         </Link>
       </div>

@@ -1,11 +1,11 @@
 import { CHUNSIC_BOT_URL } from '@/app/constants';
 import Link from 'next/link';
-import styles from './linkButton.module.scss';
+import Button from '@/app/components/button';
 
 export default function ServerLinkButton() {
   return (
-    <Link href={CHUNSIC_BOT_URL} className={styles.button} target='_blank'>
-      춘식봇 초대하기
+    <Link href={CHUNSIC_BOT_URL} target='_blank'>
+      <Button>춘식봇 초대하기</Button>
     </Link>
   );
 }

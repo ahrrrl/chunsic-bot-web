@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { CHUNSIC_BOT_URL, IMAGES } from './constants';
 import Link from 'next/link';
 import TypingText from './components/typingText';
+import Button from './components/button';
 
 const Home = () => {
   return (
@@ -19,10 +20,10 @@ const Home = () => {
       </div>
       <div className={styles.buttonContainer}>
         <Link target='_blank' href={CHUNSIC_BOT_URL}>
-          <button>춘식봇 서버에 초대</button>
+          <Button>춘식봇 서버에 초대</Button>
         </Link>
         <Link href='/docs'>
-          <button>춘식봇 배우기</button>
+          <Button>춘식봇 배우기</Button>
         </Link>
       </div>
       <div className={styles.chunsikImageContainer}>
