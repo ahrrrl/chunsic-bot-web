@@ -8,6 +8,7 @@ import LeftSidebar from '../components/leftSidebar';
 import MainContent from '../components/MainContent.tsx';
 import Link from 'next/link';
 import ChildrenCard from '../components/childrenCard';
+import { ChevronDownIcon, ChevronRightIcon } from '../components/icon';
 
 export interface Heading {
   id: string;
@@ -46,7 +47,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         className={styles.docsHeader}
         onClick={() => setIsHeaderOpen(!isHeaderOpen)}
       >
-        차례
+        {isHeaderOpen ? <ChevronDownIcon /> : <ChevronRightIcon />}
+        메뉴
       </div>
       {isHeaderOpen ? (
         <div
