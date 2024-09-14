@@ -36,13 +36,13 @@ export default function Page() {
         </Link>
       </div>
       <p>링크를 누르고 초대할 서버를 선택해주세요.</p>
-      <div className='imgContainer'>
+      <div className={styles.imgContainer}>
         <Image
           className='imageRadius'
           src={IMAGES.DOC_START_SERVER}
           alt='서버 추가 사진'
-          width={500}
-          height={700}
+          fill
+          objectFit='contain'
         />
       </div>
       <h2>초대 및 작동 확인</h2>
@@ -50,13 +50,14 @@ export default function Page() {
         디스코드 멤버 목록에 ChunsicService가 초록불이 들어와 있다면 작동을 하고
         있는겁니다!
       </p>
-      <div className='imgContainer'>
+      <div className={styles.imgContainer}>
         <Image
           className='imageRadius'
           src={IMAGES.DOC_CHECK_CHUNSIC}
           alt='춘식이봇 확인'
           width={300}
-          height={200}
+          height={260}
+          objectFit='contain'
         />
       </div>
       <h2>명령어 사용법</h2>
@@ -66,13 +67,13 @@ export default function Page() {
         나오며 좌측 상단에 춘식이 봇 로고를 누르면 춘식이 봇과 관련된 명령어만
         볼 수 있습니다.
       </p>
-      <div className='imgContainer'>
+      <div className={styles.imgContainer}>
         <Image
           className='imageRadius'
           src={IMAGES.DOC_COMMANDS}
           alt='케먼드목록'
-          width={500}
-          height={300}
+          fill
+          objectFit='contain'
         />
       </div>
     </>

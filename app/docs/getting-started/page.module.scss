@@ -18,3 +18,13 @@
   display: flex;
   justify-content: center;
 }
+
+.imgContainer {
+  width: 100%;
+  height: auto;
+  position: relative;
+  aspect-ratio: 16/9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
