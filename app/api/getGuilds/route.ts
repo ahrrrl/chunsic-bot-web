@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { IGuild } from '../../lib/mongodb/types';
 import Guild from '../../lib/mongodb/models/Guild';
 import dbConnect from '@/app/lib/mongodb/dbConnect';
+import { SortOrder } from 'mongoose';
 
 type ResponseData = {
   success: boolean;
@@ -20,17 +21,26 @@ export async function GET(
 
   try {
     await dbConnect();
-    const guilds = await Guild.find({})
-      .skip(skip)
-      .limit(limit + 1); // 하나 더 가져옵니다
 
-    const hasMore = guilds.length > limit;
-    const guildData = hasMore ? guilds.slice(0, limit) : guilds;
+    const projection = { _id: 1, guildId: 1, name: 1, icon: 1 };
+    const sort: { [key: string]: SortOrder } = { _id: 1 };
+
+    const [guilds, totalCount] = await Promise.all([
+      Guild.find({}, projection).sort(sort).skip(skip).limit(limit).lean(),
+      Guild.countDocuments(),
+    ]);
+
+    const hasMore = totalCount > skip + limit;
+
+    const serializedGuilds = guilds.map((guild) => ({
+      ...guild,
+      _id: guild._id.toString(),
+    }));
 
     return NextResponse.json(
       {
         success: true,
-        data: guildData,
+        data: serializedGuilds,
         hasMore,
       },
       { status: 200 }

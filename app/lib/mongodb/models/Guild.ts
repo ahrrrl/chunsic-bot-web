@@ -2,6 +2,7 @@ import mongoose, { Model } from 'mongoose';
 import { IGuild } from '../types';
 
 const GuildSchema = new mongoose.Schema<IGuild>({
+  _id: mongoose.Schema.Types.ObjectId,
   guildId: {
     type: String,
     required: true,
@@ -11,7 +12,7 @@ const GuildSchema = new mongoose.Schema<IGuild>({
     type: String,
     required: true,
   },
-  icon: String,
+  icon: { type: String },
 });
 
 const Guild: Model<IGuild> =
