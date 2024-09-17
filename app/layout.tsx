@@ -3,6 +3,7 @@ import { Noto_Sans_KR } from 'next/font/google';
 import './globals.scss';
 import Header from './components/header';
 import Footer from './components/footer';
+import Providers from './lib/store/reactQuery/reactQueryProvider';
 
 const inter = Noto_Sans_KR({ subsets: ['latin'] });
 
@@ -47,11 +48,13 @@ export default function RootLayout({
   return (
     <html lang='ko'>
       <body className={inter.className}>
-        <div className='layout'>
-          <Header />
-          <div className='layoutContainer'>{children}</div>
-          <Footer />
-        </div>
+        <Providers>
+          <div className='layout'>
+            <Header />
+            <div className='layoutContainer'>{children}</div>
+            <Footer />
+          </div>
+        </Providers>
       </body>
     </html>
   );
