@@ -1,5 +1,5 @@
 import { useInfiniteQuery } from '@tanstack/react-query';
-import { BASE_URL, ITEMS_PER_PAGE } from '@/app/constants';
+import { ITEMS_PER_PAGE } from '@/app/constants';
 import { IGuild } from '@/app/lib/mongodb/types';
 
 interface FetchGuildsResponse {
@@ -9,7 +9,7 @@ interface FetchGuildsResponse {
 
 const fetchGuilds = async ({ pageParam = 1 }): Promise<FetchGuildsResponse> => {
   const response = await fetch(
-    `${BASE_URL}/api/getGuilds?page=${pageParam}&limit=${ITEMS_PER_PAGE}`
+    `/api/getGuilds?page=${pageParam}&limit=${ITEMS_PER_PAGE}`
   );
   return response.json();
 };
