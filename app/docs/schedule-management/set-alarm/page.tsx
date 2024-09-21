@@ -11,12 +11,16 @@ export default function Page() {
       </p>
       <h2>/알람규칙추가</h2>
       <p>
-        기입해야하는 값은 <code>타입</code>과 <code>시간</code>입니다. 일정
-        당일을 기준으로 알람을 설정하고 싶다면 <code>타입</code>에
-        <code>당일알림</code>을, 일정 시간을 기준으로 알람을 설정하고 싶다면
-        <code>타입</code>에 <code>사전알림</code>을 선택해주세요.
+        알람 규칙을 설정할 때, 입력해야 하는 값은 <code>타입</code>과{' '}
+        <code>시간</code>입니다. <br />
+        <code>타입</code>에는 <code>절대시간</code>과 <code>상대시간</code>이
+        있으며, <br /> <strong>절대시간</strong>: 일정 당일의 특정 시간에 알람이
+        울립니다. <br /> <strong>상대시간</strong>: 일정 시작 시간을 기준으로,
+        설정한 시간 전에 알람이 울립니다. <br />
+        <code>시간</code>은 <strong>HH:MM</strong> 형식으로 입력합니다. 예:{' '}
+        <code>09:00</code> 또는 <code>13:30</code>
       </p>
-      <p>예시</p>
+      <span>추가 예시</span>
       <table>
         <thead>
           <tr>
@@ -27,25 +31,25 @@ export default function Page() {
         <tbody>
           <tr>
             <td>
-              <code>타입</code> 당일알림, <code>시간</code> 09:00
+              <code>타입</code> 절대시간 <code>시간</code> 09:00
             </td>
             <td>일정이 있는 날 오전 9시에 해당 일정을 알려줍니다.</td>
           </tr>
           <tr>
             <td>
-              <code>타입</code> 당일알림, <code>시간</code> 13:00
+              <code>타입</code> 절대시간 <code>시간</code> 13:00
             </td>
             <td>일정이 있는 날 오후 1시에 해당 일정을 알려줍니다.</td>
           </tr>
           <tr>
             <td>
-              <code>타입</code> 사전알림, <code>시간</code> 00:00
+              <code>타입</code> 상대시간 <code>시간</code> 00:00
             </td>
             <td>일정 시간에 알려줍니다.</td>
           </tr>
           <tr>
             <td>
-              <code>타입</code> 사전알림, <code>시간</code> 00:30
+              <code>타입</code> 상대시간 <code>시간</code> 00:30
             </td>
             <td>일정 30분 전에 알려줍니다.</td>
           </tr>
