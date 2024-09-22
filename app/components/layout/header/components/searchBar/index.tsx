@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import styles from './searchbar.module.scss';
 import Link from 'next/link';
-import { toc, TocItem } from '@/app/docs/toc';
+import { TocItem } from '@/types/common';
+import { toc } from '@/app/lib/toc';
 
 const Searchbar = () => {
   const [searchTerm, setSearchTerm] = useState('');

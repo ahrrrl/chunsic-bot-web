@@ -1,19 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { IGuild } from '../../lib/mongodb/types';
 import Guild from '../../lib/mongodb/models/Guild';
 import dbConnect from '@/app/lib/mongodb/dbConnect';
 import { SortOrder } from 'mongoose';
-
-type ResponseData = {
-  success: boolean;
-  data?: IGuild[];
-  message?: string;
-  hasMore: boolean;
-};
+import { GuildsListResponseData } from '@/types/api';
 
 export async function GET(
   request: NextRequest
-): Promise<NextResponse<ResponseData>> {
+): Promise<NextResponse<GuildsListResponseData>> {
   const { searchParams } = new URL(request.url);
   const page = parseInt(searchParams.get('page') || '1', 10);
   const limit = parseInt(searchParams.get('limit') || '16', 10);

@@ -1,11 +1,8 @@
 import Link from 'next/link';
-import { TocItem } from '@/app/docs/toc';
 import { usePathname } from 'next/navigation';
 import styles from '@/app/docs/docs.module.scss';
-
-interface LeftSidebarProps {
-  toc: TocItem[];
-}
+import { TocItem } from '@/types/common';
+import { LeftSidebarProps } from './types';
 
 export default function LeftSidebar({ toc }: LeftSidebarProps) {
   const pathname = usePathname();

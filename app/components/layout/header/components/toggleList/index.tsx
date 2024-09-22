@@ -3,10 +3,7 @@ import Link from 'next/link';
 import { links } from '../..';
 import styles from './toggleList.module.scss';
 import { CHUNSIC_BOT_URL } from '@/app/constants';
-
-interface ToggleListProps {
-  setMenuOpen: (open: boolean) => void;
-}
+import { ToggleListProps } from './tpyes';
 
 export default function ToggleList({ setMenuOpen }: ToggleListProps) {
   const listRef: RefObject<HTMLUListElement> = useRef(null);

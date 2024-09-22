@@ -1,10 +1,4 @@
-export interface TocItem {
-  url: string;
-  text: string;
-  description: string;
-  level: number;
-  children?: TocItem[];
-}
+import { TocItem } from '@/types/common';
 
 const appendParentUrl = (
   items: TocItem[],

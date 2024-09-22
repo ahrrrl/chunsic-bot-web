@@ -2,20 +2,14 @@
 
 import React, { useEffect, useState } from 'react';
 import styles from './docs.module.scss';
-import { toc } from './toc';
 import RightSidebar from './components/rightSidebar';
 import LeftSidebar from './components/leftSidebar';
 import MainContent from '../components/MainContent.tsx';
 import Link from 'next/link';
 import ChildrenCard from '../components/childrenCard';
 import { ChevronDownIcon, ChevronRightIcon } from '../components/icons';
-
-export interface Heading {
-  id: string;
-  text: string;
-  level: number;
-  children?: Heading[];
-}
+import { toc } from '../lib/toc';
+import { Heading } from '@/types/common';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [headings, setHeadings] = useState<Heading[]>([]);

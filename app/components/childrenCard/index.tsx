@@ -1,16 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { TocItem } from '@/app/docs/toc';
 import styles from './childrenCard.module.scss';
-
-interface ChildrenCardProps {
-  toc: TocItem[];
-}
-
-interface TocCardProps {
-  item: TocItem;
-}
+import { ChildrenCardProps, TocCardProps } from './types';
+import { TocItem } from '@/types/common';
 
 const TocCard = ({ item }: TocCardProps) => (
   <Link href={item.url} className={styles.card}>

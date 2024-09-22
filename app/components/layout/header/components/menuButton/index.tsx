@@ -1,8 +1,5 @@
 import styles from './menuButton.module.scss';
-
-interface MenuButtonProps {
-  setMenuOpen: (open: boolean) => void;
-}
+import { MenuButtonProps } from './types';
 
 export default function MenuButton({ setMenuOpen }: MenuButtonProps) {
   return (

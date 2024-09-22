@@ -1,11 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
-import { Heading } from '@/app/docs/layout';
-
-interface MainContentProps {
-  children: React.ReactNode;
-  setHeadings: (headings: Heading[]) => void;
-}
+import { MainContentProps } from './types';
 
 const MainContent: React.FC<MainContentProps> = ({ children, setHeadings }) => {
   const mainRef = useRef<HTMLDivElement>(null);

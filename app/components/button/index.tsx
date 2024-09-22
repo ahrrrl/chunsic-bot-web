@@ -1,11 +1,6 @@
-import React, { forwardRef, ButtonHTMLAttributes } from 'react';
+import React, { forwardRef } from 'react';
 import styles from './button.module.scss';
-
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'danger';
-  size?: 'small' | 'medium' | 'large';
-  responsive?: boolean;
-}
+import { ButtonProps } from './types';
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (

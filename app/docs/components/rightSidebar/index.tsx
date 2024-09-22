@@ -1,11 +1,6 @@
-import { Heading } from '@/app/docs/layout';
 import React, { useEffect, useRef } from 'react';
 import styles from '@/app/docs/docs.module.scss';
-
-interface RightSidebarProps {
-  headings: Heading[];
-  handleClick: (id: string) => void;
-}
+import { RightSidebarProps } from './types';
 
 export default function RightSidebar({
   headings,
