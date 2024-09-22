@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { Noto_Sans_KR } from 'next/font/google';
 import './globals.scss';
-import Header from './components/header';
-import Footer from './components/footer';
+import Header from './components/layout/header';
+import Footer from './components/layout/footer';
 import Providers from './lib/store/reactQuery/reactQueryProvider';
 
 const inter = Noto_Sans_KR({ subsets: ['latin'] });

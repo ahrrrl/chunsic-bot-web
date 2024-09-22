@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
-import { toc, TocItem } from '../../docs/toc';
 import styles from './searchbar.module.scss';
 import Link from 'next/link';
+import { toc, TocItem } from '@/app/docs/toc';
 
 const Searchbar = () => {
   const [searchTerm, setSearchTerm] = useState('');

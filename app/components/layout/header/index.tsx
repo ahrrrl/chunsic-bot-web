@@ -6,11 +6,11 @@ import styles from './header.module.scss';
 import { usePathname } from 'next/navigation';
 import DarkModeButton from './components/darkModeButton';
 import { IMAGES } from '@/app/constants';
-import SearchBar from '../searchBar';
 import ServerLinkButton from './components/linkButton';
 import { useState } from 'react';
 import ToggleList from './components/toggleList';
 import MenuButton from './components/menuButton';
+import Searchbar from './components/searchBar';
 
 export const links = [
   {
@@ -58,7 +58,7 @@ export default function Header() {
           </div>
         </div>
         <div className={styles.navRightBox}>
-          <SearchBar />
+          <Searchbar />
           <div className={styles.navButton}>
             <ServerLinkButton />
             <DarkModeButton />

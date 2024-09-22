@@ -3,12 +3,12 @@
 import React, { useEffect, useState } from 'react';
 import styles from './docs.module.scss';
 import { toc } from './toc';
-import RightSidebar from '../components/rightSidebar';
-import LeftSidebar from '../components/leftSidebar';
+import RightSidebar from './components/rightSidebar';
+import LeftSidebar from './components/leftSidebar';
 import MainContent from '../components/MainContent.tsx';
 import Link from 'next/link';
 import ChildrenCard from '../components/childrenCard';
-import { ChevronDownIcon, ChevronRightIcon } from '../components/icon';
+import { ChevronDownIcon, ChevronRightIcon } from '../components/icons';
 
 export interface Heading {
   id: string;

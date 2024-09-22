@@ -4,7 +4,7 @@ import styles from './guildList.module.scss';
 import { ITEMS_PER_PAGE } from '@/app/constants';
 import { SkeletonCard } from '../skeletonCard';
 import { useGuildStore } from '@/app/lib/store/reactQuery';
-import { useIntersectionObserver } from '../useIntersectionObserver';
+import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
 import React from 'react';
 import GuildCard from '../guildCard';
 
